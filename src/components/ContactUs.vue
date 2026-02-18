@@ -1,17 +1,7 @@
-<script setup lang="ts"></script>
-
-<script lang="ts">
+<script setup lang="ts">
 import { ref } from 'vue'
 
-export default {
-  setup() {
-    const email = ref('hello@dotnetmastery.com')
-
-    return {
-      email,
-    }
-  },
-}
+const email = ref('hello@dotnetmastery.com')
 </script>
 
 <template>
