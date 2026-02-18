@@ -20,6 +20,7 @@ export default {
     documentation
   </p>
   <contact-us></contact-us>
+  <button-counter></button-counter>
 </template>
 
 <style scoped></style>
