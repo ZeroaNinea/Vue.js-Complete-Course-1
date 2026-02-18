@@ -19,6 +19,7 @@ export default {
     Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
     documentation
   </p>
+  <contact-us></contact-us>
 </template>
 
 <style scoped></style>
