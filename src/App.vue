@@ -1,15 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ContactUs from './components/ContactUs.vue'
 
-<script lang="ts">
-export default {
-  setup() {
-    const message = 'Hello World!'
-
-    return {
-      message,
-    }
-  },
-}
+const message = 'Hello World!'
 </script>
 
 <template>
@@ -19,7 +11,7 @@ export default {
     Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
     documentation
   </p>
-  <contact-us></contact-us>
+  <ContactUs></ContactUs>
   <button-counter></button-counter>
 </template>
 
