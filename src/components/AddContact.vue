@@ -8,7 +8,7 @@ const contact = reactive({
 })
 
 function addContact() {
-  console.log(contact)
+  console.log('Adding contact', contact)
   contact.name = ''
   contact.phone = ''
   contact.email = ''
