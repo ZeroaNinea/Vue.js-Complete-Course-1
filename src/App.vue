@@ -43,7 +43,12 @@ const contacts = reactive([
     <p>Contact Owner Name:</p>
     <input v-model="ownername" />
     <!-- <ContactUs name="Bhrugen" phone="123123123" ownername="dotnetmastery"></ContactUs> -->
-    <ContactUs v-for="contact in contacts" :key="contact.name" v-bind="contact"></ContactUs>
+    <ContactUs
+      v-for="contact in contacts"
+      :key="contact.name"
+      v-bind="contact"
+      @toggle-favorite="contact.isFavorite = !contact.isFavorite"
+    ></ContactUs>
     <button-counter></button-counter>
   </div>
 </template>
