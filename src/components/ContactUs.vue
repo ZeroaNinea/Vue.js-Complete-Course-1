@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+// import { ref } from 'vue'
 
-const email = ref('hello@dotnetmastery.com')
+// const email = ref('hello@dotnetmastery.com')
 const props = defineProps({
   name: { type: String, required: true },
   phone: String,
   ownername: String,
+  email: { type: String, default: '-n/a-' },
 })
 
 const catgirls = [...Array(10)]
@@ -20,5 +21,6 @@ catgirls.map(() => console.log('meow'))
     <p class="float-end small text-secondary" v-if="ownername != ''">
       *this contact info belongs to {{ ownername }}
     </p>
+    <p>Email: {{ email }}</p>
   </div>
 </template>
