@@ -1,31 +1,32 @@
 <script setup lang="ts">
-import { reactive } from 'vue'
+import { reactive, ref } from 'vue'
 import ContactUs from './components/ContactUs.vue'
 
 const message = 'Hello World!'
+const ownername = ref('dotnetmastery')
 const contacts = reactive([
   {
     name: 'Bhrugen',
     phone: '123123123',
-    ownername: 'dotnetmastery',
+    ownername,
     isFavorite: true,
   },
   {
     name: 'Bella',
     phone: '6436576768',
-    ownername: 'dotnetmastery',
+    ownername,
     isFavorite: false,
   },
   {
     name: 'Lily',
     phone: '123123123',
-    ownername: 'dotnetmastery',
+    ownername,
     isFavorite: true,
   },
   {
     name: 'Chloe',
     phone: '123123123',
-    ownername: 'dotnetmastery',
+    ownername,
     isFavorite: false,
   },
 ])
