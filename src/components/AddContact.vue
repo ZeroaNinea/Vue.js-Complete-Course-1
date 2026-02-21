@@ -21,7 +21,18 @@ function addContact() {
     <form @submit.prevent="addContact">
       <div class="row">
         <div class="col-4">
-          <input v-model="contact.name" placeholder="Enter Name" type="text" class="form-control" />
+          <div class="col-4">
+            <input v-model="contact.name" placeholder="Name" type="text" class="form-control" />
+          </div>
+          <div class="col-4">
+            <input v-model="contact.email" placeholder="Email" type="text" class="form-control" />
+          </div>
+          <div class="col-4">
+            <input v-model="contact.phone" placeholder="phone" type="text" class="form-control" />
+          </div>
+          <div class="col-4">
+            <button type="submit" class="btn btn-primary">Add Contact</button>
+          </div>
         </div>
       </div>
     </form>
