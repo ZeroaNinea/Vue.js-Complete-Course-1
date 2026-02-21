@@ -2,7 +2,11 @@
 import { ref } from 'vue'
 
 const email = ref('hello@dotnetmastery.com')
-const props = defineProps(['name', 'phone', 'ownername'])
+const props = defineProps({
+  name: String,
+  phone: String,
+  ownername: String,
+})
 
 const catgirls = [...Array(10)]
 catgirls.map(() => console.log('meow'))
