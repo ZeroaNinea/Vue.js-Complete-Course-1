@@ -31,6 +31,18 @@ const contacts = reactive([
     isFavorite: false,
   },
 ])
+
+function onAddContact(contact: {
+  name: string
+  phone: string
+  email: string
+  isFavorite: boolean
+  ownername: string
+}) {
+  contact.isFavorite = false
+  contact.ownername = ownername.value
+  contacts.push(contact)
+}
 </script>
 
 <template>
@@ -43,7 +55,7 @@ const contacts = reactive([
     </p>
     <p>Contact Owner Name:</p>
     <input v-model="ownername" />
-    <AddContact></AddContact>
+    <AddContact @add-contact="onAddContact"></AddContact>
     <!-- <ContactUs name="Bhrugen" phone="123123123" ownername="dotnetmastery"></ContactUs> -->
     <ContactUs
       v-for="contact in contacts"

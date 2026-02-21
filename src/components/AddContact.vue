@@ -7,8 +7,15 @@ const contact = reactive({
   email: '',
 })
 
+const emit = defineEmits(['add-contact'])
+
 function addContact() {
-  console.log('Adding contact', contact)
+  emit('add-contact', {
+    name: contact.name,
+    phone: contact.phone,
+    email: contact.email,
+  })
+
   contact.name = ''
   contact.phone = ''
   contact.email = ''
