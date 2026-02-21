@@ -3,7 +3,7 @@ import { ref } from 'vue'
 
 const email = ref('hello@dotnetmastery.com')
 const props = defineProps({
-  name: String,
+  name: { type: String, required: true },
   phone: String,
   ownername: String,
 })
