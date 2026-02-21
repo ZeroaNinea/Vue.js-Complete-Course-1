@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { reactive, ref } from 'vue'
 import ContactUs from './components/ContactUs.vue'
+import AddContact from './components/AddContact.vue'
 
 const message = 'Hello World!'
 const ownername = ref('dotnetmastery')
@@ -42,6 +43,7 @@ const contacts = reactive([
     </p>
     <p>Contact Owner Name:</p>
     <input v-model="ownername" />
+    <AddContact></AddContact>
     <!-- <ContactUs name="Bhrugen" phone="123123123" ownername="dotnetmastery"></ContactUs> -->
     <ContactUs
       v-for="contact in contacts"
