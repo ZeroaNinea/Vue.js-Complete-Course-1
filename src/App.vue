@@ -1,11 +1,14 @@
 <script setup lang="ts">
-import { reactive, ref } from 'vue'
+import { reactive, ref, provide } from 'vue'
 import ContactUs from './components/ContactUs.vue'
 import AddContact from './components/AddContact.vue'
 
 const message = 'Hello World!'
 const ownername = ref('dotnetmastery')
-const maxLuckyNumber = ref(100)
+const maxNumber = ref(100)
+
+provide('maxLuckyNumber', maxNumber)
+
 const contacts = reactive([
   {
     name: 'Bhrugen',
@@ -61,7 +64,6 @@ function onAddContact(contact: {
     <ContactUs
       v-for="contact in contacts"
       :key="contact.name"
-      :lucky-number="Math.floor(Math.random() * maxLuckyNumber)"
       v-bind="contact"
       @toggle-favorite="contact.isFavorite = !contact.isFavorite"
     ></ContactUs>

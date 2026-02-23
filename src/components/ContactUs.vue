@@ -15,7 +15,6 @@ const props = defineProps({
     required: false,
     default: false,
   },
-  luckyNumber: { type: Number, default: 10 },
 })
 
 const catgirls = [...Array(10)]
@@ -29,7 +28,7 @@ defineEmits(['toggle-favorite'])
     <h3>{{ props.name }}</h3>
     <p>Please send an email to {{ props.email }}</p>
     <p>Phone: {{ props.phone }}</p>
-    <LuckyNumber :maxNumber="props.luckyNumber"></LuckyNumber>
+    <LuckyNumber></LuckyNumber>
     <p>Favorite: {{ props.isFavorite ? 'Yes' : 'No' }}</p>
     <button
       @click="$emit('toggle-favorite', props.isFavorite)"
