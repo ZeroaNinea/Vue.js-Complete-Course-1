@@ -2,6 +2,9 @@
 // import { ref } from 'vue'
 
 // const email = ref('hello@dotnetmastery.com')
+
+import LuckyNumber from './LuckyNumber.vue'
+
 const props = defineProps({
   name: { type: String, required: true },
   phone: String,
@@ -25,6 +28,7 @@ defineEmits(['toggle-favorite'])
     <h3>{{ props.name }}</h3>
     <p>Please send an email to {{ props.email }}</p>
     <p>Phone: {{ props.phone }}</p>
+    <LuckyNumber :maxNumber="10"></LuckyNumber>
     <p>Favorite: {{ props.isFavorite ? 'Yes' : 'No' }}</p>
     <button
       @click="$emit('toggle-favorite', props.isFavorite)"
@@ -32,6 +36,7 @@ defineEmits(['toggle-favorite'])
     >
       {{ props.isFavorite ? 'Remove Favorite' : 'Add Favorite' }}
     </button>
+
     <p class="float-end small text-secondary" v-if="props.ownername != ''">
       *this contact info belongs to {{ props.ownername }}
     </p>

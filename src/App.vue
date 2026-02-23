@@ -2,7 +2,6 @@
 import { reactive, ref } from 'vue'
 import ContactUs from './components/ContactUs.vue'
 import AddContact from './components/AddContact.vue'
-import LuckyNumber from './components/LuckyNumber.vue'
 
 const message = 'Hello World!'
 const ownername = ref('dotnetmastery')
@@ -66,7 +65,6 @@ function onAddContact(contact: {
     ></ContactUs>
     <button-counter></button-counter>
   </div>
-  <LuckyNumber :maxNumber="10"></LuckyNumber>
 </template>
 
 <style scoped></style>
