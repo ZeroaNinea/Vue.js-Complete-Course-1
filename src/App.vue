@@ -66,7 +66,7 @@ function onAddContact(contact: {
     ></ContactUs>
     <button-counter></button-counter>
   </div>
-  <LuckyNumber></LuckyNumber>
+  <LuckyNumber :maxNumber="10"></LuckyNumber>
 </template>
 
 <style scoped></style>
